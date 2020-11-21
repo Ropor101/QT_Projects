@@ -33,6 +33,10 @@ void MainWindow::on_CountButton_clicked()
         ui->LeftText->setText("Первое слагаемое");
         ui->RightText->setText("Второе слагаемое");
         result=first+second;
+
+        QString strResult;
+        strResult.setNum(result);
+        ui->Result2->setText(strResult);
     }
 
 
@@ -41,6 +45,10 @@ void MainWindow::on_CountButton_clicked()
         ui->LeftText->setText("Уменьшаемое");
         ui->RightText->setText("Вычитаемое");
         result=first-second;
+
+        QString strResult;
+        strResult.setNum(result);
+        ui->Result2->setText(strResult);
     }
 
 
@@ -49,6 +57,10 @@ void MainWindow::on_CountButton_clicked()
         ui->LeftText->setText("Первый множитель");
         ui->RightText->setText("Второй множитель");
         result=first*second;
+
+        QString strResult;
+        strResult.setNum(result);
+        ui->Result2->setText(strResult);
     }
 
 
@@ -59,7 +71,11 @@ void MainWindow::on_CountButton_clicked()
             ui->LeftText->setText("Делимое");
             ui->RightText->setText("Делитель");
             result=first/second;
-        }
+
+            QString strResult;
+            strResult.setNum(result);
+            ui->Result2->setText(strResult);
+        }       
         else
         {
             ui->Del0->setText("ДЕЛИТЬ НА 0 НЕЛЬЗЯ!");
@@ -70,14 +86,25 @@ void MainWindow::on_CountButton_clicked()
     else if(ui->Koren->isChecked())                                   // корень числа
     {
         ui->LeftText->setText("Извлекаемое число");
-        result=sqrt(first);
+
+        if(ui->FirstNum->text().contains("-"))
+        {
+           ui->Del0->setText("ИЗВЛЕЧЬ КОРЕНЬ ИЗ ОТРИЦАТЕЛЬНОГО ЧИСЛА НЕЛЬЗЯ!");
+        }
+        else
+        {
+            result=sqrt(first);
+            QString strResult;
+            strResult.setNum(result);
+            ui->Result2->setText(strResult);
+        }
     }
 
 
-    QString strResult;                                          //преобразование числа в текст
-    strResult.setNum(result);
-
-    ui->Result2->setText(strResult);
+    else
+    {
+        ui->Result2->setText("Выберите операцию!");
+    }
 
 
     if(ui->Koren->isChecked())                                      //условия вывода текста
@@ -111,3 +138,7 @@ void MainWindow::on_CountButton_clicked()
 
 
 }
+
+
+
+

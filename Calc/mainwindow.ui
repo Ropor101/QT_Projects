@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>439</height>
    </rect>
   </property>
   <property name="font">
@@ -234,10 +234,10 @@
    <widget class="QLabel" name="Del0">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>250</x>
       <y>290</y>
-      <width>131</width>
-      <height>16</height>
+      <width>331</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
