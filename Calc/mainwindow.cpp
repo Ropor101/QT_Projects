@@ -89,7 +89,11 @@ void MainWindow::on_CountButton_clicked()
 
         if(ui->FirstNum->text().contains("-"))
         {
-           ui->Del0->setText("ИЗВЛЕЧЬ КОРЕНЬ ИЗ ОТРИЦАТЕЛЬНОГО ЧИСЛА НЕЛЬЗЯ!");
+           //ui->Del0->setText("ИЗВЛЕЧЬ КОРЕНЬ ИЗ ОТРИЦАТЕЛЬНОГО ЧИСЛА НЕЛЬЗЯ!");
+            result=sqrt(abs(first))*(-1);
+            QString strResult;                  //при условии что корень из отрицательных чисел
+            strResult.setNum(result);           //считать нельзя удалить/закоментить эти 3 строчки
+            ui->Result2->setText(strResult);    //и раскоментить 1 строчку в данном if
         }
         else
         {
