@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>371</width>
+    <height>131</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>255</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QComboBox" name="TFLeft">
+       <item>
+        <property name="text">
+         <string>False</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>True</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="CMBMid">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>And</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Or</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Negative</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Implication</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Equivalence</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Xor</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="TFRight">
+       <item>
+        <property name="text">
+         <string>False</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>True</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>371</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
